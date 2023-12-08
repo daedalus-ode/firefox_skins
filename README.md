@@ -1,2 +1,3 @@
-# firefox_skins
-Skins listed as branches
+# Firefox vice
+
+https://github.com/jtlw99/vicefox
