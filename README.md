@@ -1,2 +1,3 @@
-# firefox_skins
-Skins listed as branches
+# Firefox one
+
+https://github.com/Godiesc/firefox-one
