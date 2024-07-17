@@ -4,9 +4,6 @@
 	font-family: JetBrainsMono Nerd Font, JetBrains Mono, monospace, monospace;
 }
 
-#alltabs-button,
-.titlebar-buttonbox-container,
-#page-action-buttons,
 #tracking-protection-icon-container,
 #identity-box {
 	display: none;
