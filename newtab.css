@@ -1,12 +1,11 @@
   @-moz-document url(about:newtab),
   url(about:home),
-  url(about:privatebrowsing),
   url-prefix("about:firefoxview") {
     :root body {
       /* Specify both jpg and png file extensions, but jpg images will always
        * have a higher priority.
        */
-      --bg-0: url(./haunted.gif), url(../Background-0.png);
+      --bg-0: url(./blackHole.gif), url(../Background-0.png);
       --bg-1: url(./haunted.gif), url(../Background-1.png);
       --newtab-element-hover-color: rgb(239 239 239 / .3) !important;
       --newtab-element-active-color: rgb(239 239 239 / .45) !important;
@@ -21,7 +20,7 @@
 
     :root[lwt-newtab-brighttext] body,
     :root.private body {
-      background-image: var(--bg-1), var(--bg-0) !important;
+      background-image: var(--bg-0), var(--bg-0) !important;
       --newtab-element-hover-color: rgb(66 66 66 / .4) !important;
       --newtab-element-active-color: rgb(66 66 66 / .55) !important;
     }
@@ -31,11 +30,9 @@
         background-image: var(--bg-0) !important;
       }
 
-      @media (prefers-color-scheme: dark) {
-        :root.private body {
-          background-image: var(--bg-1), var(--bg-0) !important;
-        }
-      }
+	:root.private body {
+		background-image: var(--bg-1), var(--bg-0) !important;
+      	}
     }
 
     .top-site-outer .title,
@@ -92,10 +89,24 @@
   .search-inner-wrapper{
     margin-top: 55% !important;
   }
+
   @-moz-document url(about:privatebrowsing){
 	  .showPrivate,
 	  .showSearch {
 		  display : none !important;
 	  }
+
+    :root body {
+      --bg-1: url(./haunted.gif), url(../Background-1.png);
+      --newtab-element-hover-color: rgb(239 239 239 / .3) !important;
+      --newtab-element-active-color: rgb(239 239 239 / .45) !important;
+      --text-shadow: 0 1px 2px #000;
+      --icon-shadow: drop-shadow(0 0.3px 0.6px #000);
+      background-color: #252525 !important;
+      background-image: var(--bg-1) !important;
+      background-position: center !important;
+      background-size: cover !important;
+      background-attachment: fixed !important;
+    }
   }
 
