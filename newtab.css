@@ -92,3 +92,10 @@
   .search-inner-wrapper{
     margin-top: 55% !important;
   }
+  @-moz-document url(about:privatebrowsing){
+	  .showPrivate,
+	  .showSearch {
+		  display : none !important;
+	  }
+  }
+
