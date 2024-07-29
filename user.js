@@ -25,3 +25,4 @@ user_pref("widget.gtk.ignore-bogus-leave-notify", 1);
 
 // Disable floating search
 user_pref("shyfox.disable.floating.search", true);
+
