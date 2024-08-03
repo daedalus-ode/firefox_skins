@@ -1,112 +1,112 @@
   @-moz-document url(about:newtab),
   url(about:home),
   url-prefix("about:firefoxview") {
-    :root body {
-      /* Specify both jpg and png file extensions, but jpg images will always
-       * have a higher priority.
-       */
-      --bg-0: url(./blackHole.gif), url(../Background-0.png);
-      --bg-1: url(./haunted.gif), url(../Background-1.png);
-      --newtab-element-hover-color: rgb(239 239 239 / .3) !important;
-      --newtab-element-active-color: rgb(239 239 239 / .45) !important;
-      --text-shadow: 0 1px 2px #000;
-      --icon-shadow: drop-shadow(0 0.3px 0.6px #000);
-      background-color: #252525 !important;
-      background-image: var(--bg-0) !important;
-      background-position: center !important;
-      background-size: cover !important;
-      background-attachment: fixed !important;
-    }
+	:root body {
+		/* Specify both jpg and png file extensions, but jpg images will always
+		* have a higher priority.
+		*/
+		--bg-0: url(./watchtower.jpg), url(../Background-0.png);
+		--newtab-element-hover-color: rgb(239 239 239 / .3) !important;
+		--newtab-element-active-color: rgb(239 239 239 / .45) !important;
+		--text-shadow: 0 1px 2px #000;
+		--icon-shadow: drop-shadow(0 0.3px 0.6px #000);
+		background-color: #252525 !important;
+		background-image: var(--bg-0) !important;
+		background-position: center !important;
+		background-size: cover !important;
+		background-attachment: fixed !important;
+	}
 
-    :root[lwt-newtab-brighttext] body,
-    :root.private body {
-      background-image: var(--bg-0), var(--bg-0) !important;
-      --newtab-element-hover-color: rgb(66 66 66 / .4) !important;
-      --newtab-element-active-color: rgb(66 66 66 / .55) !important;
-    }
-
-    @media not (-moz-bool-pref: "browser.theme.dark-private-windows") {
-      :root.private body {
-        background-image: var(--bg-0) !important;
-      }
-
+	:root[lwt-newtab-brighttext] body,
 	:root.private body {
-		background-image: var(--bg-1), var(--bg-0) !important;
-      	}
-    }
+		background-image: var(--bg-0), var(--bg-0) !important;
+		--newtab-element-hover-color: rgb(66 66 66 / .4) !important;
+		--newtab-element-active-color: rgb(66 66 66 / .55) !important;
+	}
 
-    .top-site-outer .title,
-    .ds-header,
-    .ds-layout .section-title span,
-    .ds-navigation,
-    .page-section-header > h1,
-    .page-section-header > .section-description,
-    .closed-tab-li-main:not(:hover, :active),
-    .closed-tab-li-dismiss,
-    .brand-logo > .brand-feature-name,
-    #colorways-collection-title,
-    #colorways-collection-description,
-    .synced-tabs-container > .loading-content {
-      text-shadow: var(--text-shadow) !important;
-      color: #fff !important;
-      -moz-osx-font-smoothing: auto !important;
-    }
+	@media not (-moz-bool-pref: "browser.theme.dark-private-windows") {
+		:root.private body {
+			background-image: var(--bg-0) !important;
+		}
 
-    .wordmark,
-    .icon-settings,
-    .top-site-outer .context-menu-button,
-    .closed-tab-li-main:not(:hover, :active) .favicon,
-    .page-section-header:not(:hover) > .twisty,
-    .synced-tab-li-favicon,
-    .page-section-header:not(:hover) > .twisty,
-    .closed-tab-li-dismiss:not(:hover),
-    .synced-tabs-container > .loading-content .sync {
-      filter: var(--icon-shadow) !important;
-      color: #fff !important;
-      fill: currentColor !important
-    }
+		:root.private body {
+			background-image: var(--bg-1), var(--bg-0) !important;
+		}
+	}
 
-    .section-top-bar .learn-more-link a,
-    .ds-navigation a {
-      color: #b3d4ff !important;
-      text-shadow: var(--text-shadow) !important;
-      -moz-osx-font-smoothing: auto !important;
-    }
+	.top-site-outer .title,
+	.ds-header,
+	.ds-layout .section-title span,
+	.ds-navigation,
+	.page-section-header > h1,
+	.page-section-header > .section-description,
+	.closed-tab-li-main:not(:hover, :active),
+	.closed-tab-li-dismiss,
+	.brand-logo > .brand-feature-name,
+	#colorways-collection-title,
+	#colorways-collection-description,
+	.synced-tabs-container > .loading-content {
+		text-shadow: var(--text-shadow) !important;
+		color: #fff !important;
+		-moz-osx-font-smoothing: auto !important;
+	}
 
-    .top-site-outer .title .sponsored-label,
-    .closed-tab-li-main:not(:hover, :active) :is(.closed-tab-li-url, .closed-tab-li-time) {
-      color: #eee !important;
-    }
+	.wordmark,
+	.icon-settings,
+	.top-site-outer .context-menu-button,
+	.closed-tab-li-main:not(:hover, :active) .favicon,
+	.page-section-header:not(:hover) > .twisty,
+	.synced-tab-li-favicon,
+	.page-section-header:not(:hover) > .twisty,
+	.closed-tab-li-dismiss:not(:hover),
+	.synced-tabs-container > .loading-content .sync {
+		filter: var(--icon-shadow) !important;
+		color: #fff !important;
+		fill: currentColor !important
+	}
 
-    .fixed-search .search-wrapper {
-      border-bottom: 0 !important;
-      background: transparent linear-gradient(#0004, transparent) !important;
-    }
-  }
-  .logo-and-wordmark{
-	  display: none !important;
-  }
-  .search-inner-wrapper{
-    margin-top: 55% !important;
-  }
+	.section-top-bar .learn-more-link a,
+	.ds-navigation a {
+		color: #b3d4ff !important;
+		text-shadow: var(--text-shadow) !important;
+		-moz-osx-font-smoothing: auto !important;
+	}
 
-  @-moz-document url(about:privatebrowsing){
-	  .showPrivate,
-	  .showSearch {
-		  display : none !important;
-	  }
+	.top-site-outer .title .sponsored-label,
+	.closed-tab-li-main:not(:hover, :active) :is(.closed-tab-li-url, .closed-tab-li-time) {
+		color: #eee !important;
+	}
 
-    :root body {
-      --bg-1: url(./haunted.gif), url(../Background-1.png);
-      --newtab-element-hover-color: rgb(239 239 239 / .3) !important;
-      --newtab-element-active-color: rgb(239 239 239 / .45) !important;
-      --text-shadow: 0 1px 2px #000;
-      --icon-shadow: drop-shadow(0 0.3px 0.6px #000);
-      background-color: #252525 !important;
-      background-image: var(--bg-1) !important;
-      background-position: center !important;
-      background-size: cover !important;
-      background-attachment: fixed !important;
-    }
-  }
+	.fixed-search .search-wrapper {
+		border-bottom: 0 !important;
+		background: transparent linear-gradient(#0004, transparent) !important;
+	}
+
+	.logo-and-wordmark{
+		display: none !important;
+	}
+	.search-inner-wrapper{
+		margin-top: 55% !important;
+	}
+}
+
+@-moz-document url(about:privatebrowsing){
+	.showPrivate,
+	.showSearch {
+		display : none !important;
+	}
+
+	:root body {
+		--bg-1: url(./Starwars.jpg), url(../Background-1.png);
+		--newtab-element-hover-color: rgb(239 239 239 / .3) !important;
+		--newtab-element-active-color: rgb(239 239 239 / .45) !important;
+		--text-shadow: 0 1px 2px #000;
+		--icon-shadow: drop-shadow(0 0.3px 0.6px #000);
+		background-color: #252525 !important;
+		background-image: var(--bg-1) !important;
+		background-position: center !important;
+		background-size: cover !important;
+		background-attachment: fixed !important;
+	}
+}
 
